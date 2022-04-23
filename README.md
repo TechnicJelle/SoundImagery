@@ -1,13 +1,34 @@
 # SoundImagery
+C program to convert Sound to Images and back again
 
-## Installation
+## Running
+After [setting up the dependencies](#building-instructions), you should be able to just execute `make run` to run the program.
 
-This project uses the [Bass Library](https://www.un4seen.com/), so please download the correct version for your operating system.
+## Building instructions
 
-Both Windows and Linux require the `bass.h` file in the root of the repository.
+This project uses the [Bass Library](https://www.un4seen.com/bass.html), so please download the correct version for your operating system.
 
 ### For Windows:
-Put the x64 versions of the `bass.dll` and `bass.lib` files in the root of this repository and execute `make run`
+Download the **Win32** version of Bass from the linked webpage above,\
+extract these files to the root of this repository:
+- `bassXX.zip/x64/bass.dll`
+- `bassXX.zip/c/bass.h`
+- `bassXX.zip/c/x64/bass.lib`
 
 ### For Linux:
-Put the x64 version of the `libbass.so` file in the root of this repository and execute `make run`
+Download the **Linux** version of Bass from the linked webpage above,\
+extract these files to the root of this repository:
+- `bassXX-linux.zip/bass.h`
+- `bassXX-linux.zip/x64/libbass.so`
+
+### For Android (in [Termux](https://termux.com/))
+Run this command in the Termux shell:
+```
+getprop ro.product.cpu.abi
+```
+This returns your device's CPU architecture, which you need for the next step:
+
+Download the **Android** version of Bass from the linked webpage above,\
+then extract these files to the root of this repository:
+- `bassXX-android.zip/c/bass.h`
+- `bassXX-android.zip/libs/<your device's CPU architecture>/libbass.so`
