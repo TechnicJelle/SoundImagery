@@ -1,1 +1,14 @@
+bass/
+bass_linux/
 si
+si.exe
+
+# Shared requirements
+bass.h
+
+# Windows requirements
+bass.dll
+bass.lib
+
+# Linux requirements
+libbass.so

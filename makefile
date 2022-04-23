@@ -1,10 +1,14 @@
+FLAGS = -Os -I. -L.
+FLAGS += -Wl,--no-warn-search-mismatch,-rpath,.
+LIBS = -lbass
+OUTPUT = si
+
 CC=gcc
 
 C_FILES = SoundImagery.c
-OUTPUT = si
 
 $(OUTPUT): FORCE
-	$(CC) -o $@ $(C_FILES) -Os
+	$(CC) $(FLAGS) $(C_FILES) $(LIBS) -o $(OUTPUT)
 
 build: $(OUTPUT)
 
