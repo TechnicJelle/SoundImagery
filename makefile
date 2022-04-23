@@ -1,5 +1,5 @@
 FLAGS = -Os -I. -L.
-FLAGS += -Wl,--no-warn-search-mismatch,-rpath,.
+FLAGS += -Wl,-rpath,.
 LIBS = -lbass
 OUTPUT = si
 
