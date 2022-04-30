@@ -1,13 +1,5 @@
-#include <stdio.h>
 #include "bass.h"
-
-void printi(int num) {
-	printf("%d\n", num);
-}
-
-void prints(char string[]) {
-	printf("%s\n", string);
-}
+#include "techj.h"
 
 int main() {
 	prints("Starting up...");
